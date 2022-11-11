@@ -1,0 +1,11 @@
+Couleur noire
+#000000 
+
+Couleur noire/gris
+#F1F5F8
+
+Couleur rouge
+#CF3034
+
+Couleur blanche
+#FFFFFF
