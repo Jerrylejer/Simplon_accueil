@@ -2,10 +2,13 @@
 /** GENERAL */
 *,
 ::before,
-::after {
+::after,
+ul,
+ol {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    list-style: none;
 }
 
 body,
@@ -36,6 +39,11 @@ h3 {
     color: #cf3034;
 }
 
+h4 {
+    font: normal 700 24px/113.4% 'Nunito Sans';
+    color: white;
+}
+
 p {
     font: normal 300 18px/25px 'Nunito Sans';
     color: #000000;
@@ -48,6 +56,10 @@ button {
     padding: 14px 0;
     margin: 0px 16px;
     cursor: pointer;
+}
+
+footer {
+    padding: 15px;
 }
 
 /** DECLARATIONS */
@@ -101,8 +113,7 @@ button {
 .impact__items,
 .temoignages,
 .apprentis,
-.caroussel__soutiens
- {
+.caroussel__soutiens {
     background: white;
 }
 
@@ -177,6 +188,14 @@ button {
     right: 2px;
 }
 
+/*! a checker */
+.impact__items--4 img {
+    position: absolute;
+    bottom: 12px;
+    right: 10px;
+}
+/*! a checker */
+
 .impact__items--4 {
     background-color: #cf3034;
 }
@@ -185,11 +204,14 @@ button {
     color: white;
     font-size: 1.2rem;
     font-weight: bold;
-    margin: 24px 19px 58px;
+    margin: 15px 19px 50px;
 }
 
 /*? SECTION TEMOIGNAGES */
 
+.temoignages {
+    padding-bottom: 20px;
+}
 .caroussel__temoignage-texte img {
     margin-left: 16px;
     margin-top: 25px;
@@ -206,12 +228,19 @@ button {
 
 .caroussel__nav {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
+    padding-top: 20px;
 }
 
 .caroussel__slide {
     display: flex;
     justify-content: center;
+    margin: 0 40px 0;
+}
+
+.caroussel__slide :nth-child(2) {
+    font-weight: bolder;
+    margin: 0 10px 0;
 }
 
 /*? SECTION APPRENTIS */
@@ -250,9 +279,90 @@ button {
     width: 330px;
 }
 
-.caroussel__soutiens-nav {
+.caroussel__soutiens-btn {
     display: flex;
-    justify-content: center;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.caroussel__soutiens-nav {
+    margin: 0 auto;
+}
+
+.caroussel__soutiens-nav :nth-child(2) {
+    margin: 0 30px 0;
+}
+
+/* Bouton enter refait manuellement car padding sur image Figma */
+.enter-red {
+    position: relative;
+    width: 47px;
+    height: 47px;
+    object-fit: cover;
+    background: #cf3034;
+}
+
+.enter-red img {
+    position: absolute;
+    top: 8px;
+    left: 5px;
 }
 
 /*? SECTION FOOTERS */
+
+.footer h4 {
+    margin-top: 42px;
+    margin-bottom: 6px;
+}
+
+.footer__liste {
+    margin-bottom: 52px;
+}
+
+.footer__liste ul li {
+    line-height: 45px;
+    font-weight: lighter;
+}
+
+.footer__form {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer__form label {
+    margin-bottom: 15px;
+}
+
+.footer__form input {
+    padding: 8px 0;
+    margin-bottom: 21px;
+    background: #cf3034;
+    border: 0.5px solid white;
+    border-right: none;
+    width: 90%;
+    height: 30px;
+}
+
+.input__block {
+    display: flex;
+}
+
+.footer__form img {
+    width: 32.17px;
+    height: 30px;
+    object-fit: cover;
+}
+
+.footer__form input::placeholder {
+    color: white;
+    padding-left: 25px;
+}
+
+.footer__logos {
+    height: 180px;
+    margin-bottom: 38px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
