@@ -88,7 +88,13 @@ footer {
 .nav__mobile-logo,
 .burger,
 .logo__simplon,
-.impact__items {
+.impact__items,
+.enter-red img,
+.input__block img,
+.caroussel__nav,
+.caroussel__soutiens-nav img,
+.footer__liste,
+.footer__logos {
     cursor: pointer;
 }
 
@@ -119,6 +125,9 @@ footer {
 
 /*? NAVIGATION */
 .nav__mobile {
+    position:fixed;
+    z-index: 1;
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -136,6 +145,8 @@ footer {
 
 /*? HEADER */
 .header {
+    /*! voir si pas autre solution pour ne pas cacher le logo Simplon */
+    padding-top: 100px;
     padding-bottom: 30px;
 }
 
@@ -331,6 +342,7 @@ footer {
 
 .footer__form label {
     margin-bottom: 15px;
+    font-weight: bolder;
 }
 
 .footer__form input {
