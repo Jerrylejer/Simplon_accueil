@@ -85,7 +85,7 @@ footer {
     width: 100%;
 }
 
-.nav__mobile-logo,
+.menu__mobile-logo,
 .burger,
 .logo__simplon,
 .impact__items,
@@ -108,7 +108,7 @@ footer {
     flex-direction: column;
 }
 
-.nav__mobile,
+.menu__mobile,
 .impact,
 .temoignage__titre,
 .apprentis__titre {
@@ -124,7 +124,7 @@ footer {
 }
 
 /*? NAVIGATION */
-.nav__mobile {
+.menu__mobile {
     position:fixed;
     z-index: 1;
     width: 100%;
@@ -141,6 +141,22 @@ footer {
 
 .burger img:nth-child(2) {
     margin: 4px 0px;
+}
+
+/* classes manipulées par le JS pour l'animation */
+.opacity {
+    opacity: 0;
+    transition: 1s;
+}
+
+.rotate1 {
+    transform: translateY(10px) rotate(45deg);
+    transition: 1s;
+}
+
+.rotate2 {
+    transform: translateY(-10px) rotate(-45deg);
+    transition: 1s
 }
 
 /*? HEADER */
