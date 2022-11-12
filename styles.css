@@ -9,6 +9,8 @@ ol {
     margin: 0;
     box-sizing: border-box;
     list-style: none;
+    text-decoration: none;
+    color: black;
 }
 
 body,
@@ -47,6 +49,10 @@ h4 {
 p {
     font: normal 300 18px/25px 'Nunito Sans';
     color: #000000;
+}
+
+li {
+    font: normal 18px/25px 'Nunito Sans';
 }
 
 button {
@@ -123,9 +129,9 @@ footer {
     background: white;
 }
 
-/*? NAVIGATION */
+/*? MENU - NAVIGATION */
 .menu__mobile {
-    position:fixed;
+    position: fixed;
     z-index: 1;
     width: 100%;
     display: flex;
@@ -143,7 +149,26 @@ footer {
     margin: 4px 0px;
 }
 
-/* classes manipulées par le JS pour l'animation */
+.nav__mobile {
+    width: 100%;
+    height: 593px;
+    position: absolute;
+    top: -490px;
+    background: #f1f5f8;
+    padding: 118px 152px 40px 153px;
+}
+
+.nav__liste {
+    width: 109px;
+    height: 435px;
+}
+
+.nav__liste-items {
+    line-height: 24.55px;
+    margin-bottom: 52px;
+}
+
+/* classes crées pour les animations en Javascript */
 .opacity {
     opacity: 0;
     transition: 1s;
@@ -156,7 +181,12 @@ footer {
 
 .rotate2 {
     transform: translateY(-10px) rotate(-45deg);
-    transition: 1s
+    transition: 1s;
+}
+
+.nav__mobile--show {
+    top: 0;
+    transition: 1s;
 }
 
 /*? HEADER */

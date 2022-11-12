@@ -14,9 +14,9 @@
         <title>Simplon.co</title>
     </head>
     <body>
-        <!-- navigation desktop - cachée par défaut -->
+        <!--! navigation desktop - cachée par défaut car développement mobile-first-->
         <div class="menu__desktop"></div>
-        <!-- navigation burger - affichée par défaut-->
+        <!--! navigation burger - affichée par défaut (actionne la navigation au click en JS)-->
         <div class="menu__mobile">
             <div class="menu__mobile-logo">
                 <img
@@ -25,20 +25,49 @@
                 />
             </div>
             <div class="burger" id="burger">
-                <img id="barre_1"
+                <img
+                    id="barre_1"
                     src="/assets/icônes_fonctionnes/burger_ouvert/Rectangle5.png"
                     alt="barre burger"
                 />
-                <img id="barre_2"
+                <img
+                    id="barre_2"
                     src="/assets/icônes_fonctionnes/burger_ouvert/Rectangle6.png"
                     alt="barre burger"
                 />
-                <img id="barre_3"
+                <img
+                    id="barre_3"
                     src="/assets/icônes_fonctionnes/burger_ouvert/Rectangle7.png"
                     alt="barre burger"
                 />
             </div>
         </div>
+        <!--! Menu mobile (position top -480px par défaut => animé au click menu en JS) -->
+        <nav class="nav__mobile" id="nav__mobile">
+            <ul class="nav__liste">
+                <li class="nav__liste-items">
+                    <a href="#">Entreprises</a>
+                </li>
+                <li class="nav__liste-items">
+                    <a href="#">Réseaux</a>
+                </li>
+                <li class="nav__liste-items">
+                    <a href="#">A propos</a>
+                </li>
+                <li class="nav__liste-items">
+                    <a href="#">Collaborer</a>
+                    <img src="/assets/icônes_fonctionnes/Polygon 1.png" alt="">
+                </li>
+                <li class="nav__liste-items">
+                    <a href="#">Formations</a>
+                    <img src="/assets/icônes_fonctionnes/Polygon 1.png" alt="">
+                </li>
+                <li class="nav__liste-items">
+                    <a href="#">Contact</a>
+                </li>
+            </ul>
+        </nav>
+        <!--! Header -->
         <header class="header">
             <!-- Logo de Simplon -->
             <div class="logo__simplon">
@@ -59,9 +88,9 @@
                 <button class="white">Une question ?</button>
             </div>
         </header>
-        <!-- Contenu principal de la page -->
+        <!--! Contenu principal de la page -->
         <main>
-            <!-- Section impacts -->
+            <!--? Section "NOTRE IMPACT" -->
             <section class="impact">
                 <h2 class="impact__titre">Notre impact</h2>
                 <div class="impact__container">
@@ -98,6 +127,7 @@
                     </div>
                 </div>
             </section>
+            <!--? Section "TEMOIGNAGES" -->
             <section class="temoignages">
                 <h2 class="temoignage__titre">Témoignages</h2>
                 <div class="caroussel__temoignage-texte">
@@ -173,6 +203,7 @@
                     />
                 </div>
             </section>
+            <!--? Section "APPRENTIS SIMPLON" -->
             <section class="apprentis">
                 <h2 class="apprentis__titre">Apprentis Simplon</h2>
                 <div class="apprentis__card">
@@ -196,6 +227,7 @@
                     <button class="red">En savoir plus</button>
                 </div>
             </section>
+            <!--? Section "ILS NOUS SOUTIENNENT" -->
             <section class="soutiens">
                 <h2 class="soutiens__titre">Ils nous soutiennent</h2>
                 <div class="caroussel__soutiens">
@@ -234,8 +266,10 @@
                 </div>
             </section>
         </main>
+        <!--! Footer -->
         <footer class="footer red">
             <h4>Restez informés</h4>
+            <!-- Formulaire d'inscription à la newsletter -->
             <form class="footer__form">
                 <label for="email">Inscrivez-vous à la newsletter</label>
                 <div class="input__block">
@@ -244,9 +278,13 @@
                         name="email"
                         placeholder="Entrez votre email"
                     />
-                    <img src="/assets/icônes_fonctionnes/Vector_mail.png" alt="" />
+                    <img
+                        src="/assets/icônes_fonctionnes/Vector_mail.png"
+                        alt=""
+                    />
                 </div>
             </form>
+            <!-- Navigation autres pages du site -->
             <nav class="footer__liste">
                 <ul>
                     <li>Nos actualités</li>
@@ -259,6 +297,7 @@
                     <li>Accessibilité</li>
                 </ul>
             </nav>
+            <!-- Réseaux sociaux et Simplon -->
             <div class="footer__logos">
                 <img src="/assets/icônes_reseaux/reseaux.png" alt="" />
                 <img src="/assets/icônes_entreprises/footer-img.png" alt="" />
