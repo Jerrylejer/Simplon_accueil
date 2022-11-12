@@ -278,10 +278,6 @@ footer {
     width: 100%;
 }
 
-/* .temoignages__articles {
-    display: flex;
-} */
-
 .caroussel__temoignage-texte img {
     margin-left: 16px;
     margin-top: 25px;
@@ -311,21 +307,44 @@ footer {
 }
 
 .caroussel__slide :nth-child(2) {
-    /* font-weight: bolder; */
     margin: 0 10px 0;
 }
 
-/* classes crées pour les animations en Javascript */
+/** CLASS ANIMATIONS POUR LE JAVASCRIPT */
 .displayon {
     display: block;
-    transition: 1s;
+    animation-name: opacity1;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+}
+
+/* Animation sur apparition/disparition des témoignages */
+@keyframes opacity1 {
+    from {
+        opacity:0;
+    }
+     to {
+        opacity: 1;
+     }
 }
 
 .displayoff {
     display: none;
-    transition: 1s;
+    animation-name: opacity0;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
 }
 
+@keyframes opacity0 {
+    from {
+        opacity: 1;
+    }
+     to {
+        opacity: 0;
+     }
+}
+
+/* Gras du chiffre sélectionné */
 .gras {
     font-weight: bolder;
 }
@@ -367,6 +386,16 @@ footer {
     margin-bottom: 30px;
 }
 
+.caroussel__soutiens-logos {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.caroussel__soutiens-logos img {
+    margin: 19.96px 0;
+}
+
 .caroussel__soutiens-logos :nth-child(2) {
     width: 330px;
 }
@@ -383,6 +412,40 @@ footer {
 
 .caroussel__soutiens-nav :nth-child(2) {
     margin: 0 30px 0;
+}
+
+/** CLASS ANIMATIONS POUR LE JAVASCRIPT */
+.displayon {
+    display: block;
+    animation-name: opacity1;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+}
+
+/* Animation sur apparition/disparition des témoignages */
+@keyframes opacity1 {
+    from {
+        opacity:0;
+    }
+     to {
+        opacity: 1;
+     }
+}
+
+.displayoff {
+    display: none;
+    animation-name: opacity0;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes opacity0 {
+    from {
+        opacity: 1;
+    }
+     to {
+        opacity: 0;
+     }
 }
 
 /*! Bouton enter refait manuellement car padding sur image Figma */
