@@ -60,7 +60,7 @@ button {
     font: normal 700 18px/25px 'Nunito Sans';
     color: #000000;
     border-radius: 5px;
-    padding: 14px 0;
+    padding: 13px 0;
     margin: 0px 16px;
     cursor: pointer;
 }
@@ -219,6 +219,7 @@ footer {
 }
 
 /*? HEADER */
+
 .header {
     /*! voir si pas autre solution pour ne pas cacher le logo Simplon */
     padding-top: 100px;
@@ -246,6 +247,11 @@ footer {
 .header__buttons {
     justify-content: space-between;
     gap: 15px;
+}
+
+/* phot header cachée en version mobile, apparait au breakpoint 1246px */
+.header__desktop-droite {
+    display: none;
 }
 
 /*? SECTION IMPACTS */
@@ -410,10 +416,13 @@ footer {
 .caroussel__soutiens-logos {
     justify-content: center;
     margin-top: 20px;
+    margin-bottom: 9px;
 }
 
 .caroussel__soutiens-logos img {
     margin: 19.96px 0;
+    width: 329.39px;
+    height: 50px;
 }
 
 .caroussel__soutiens-logos :nth-child(2) {
@@ -573,11 +582,6 @@ footer {
         margin: 0 auto;
     }
 
-    .header__buttons {
-        flex-direction: row;
-        justify-content: flex-start;
-    }
-
     .form__container {
         display: flex;
         flex-direction: column;
@@ -606,7 +610,8 @@ footer {
     .menu__desktop {
         display: block;
         max-width: 1196px;
-        margin: 0 auto 39px;
+        margin: 0 auto 37px;
+        padding: 19px 10px 0px;
         height: 102px;
         border-bottom: 2px solid white;
         display: flex;
@@ -639,8 +644,41 @@ footer {
 
     .header {
         padding-top: 0;
+        display: flex;
+        height: 514px;
+        padding-left: 56px;
+        padding-bottom: 0px;
+        align-items: center;
     }
 
+    .header__paragraphe {
+        margin-bottom: 49px;
+    }
+
+    .header__desktop-droite {
+        display: block;
+    }
+
+    .header__desktop-droite img {
+        width: 500px;
+        margin-left: 40px;
+    }
+
+    
+    .header__texte h1 {
+        font-size: 38px;
+    }
+
+    button {
+        margin: 0px 0px;
+    }
+    
+    .header__buttons {
+        flex-direction: row;
+        justify-content: flex-start;
+        gap: 19px;
+    }
+    
     .header,
     .impact,
     .apprentis,
@@ -648,10 +686,6 @@ footer {
     .soutiens {
         max-width: 1196px;
         margin: 0 auto;
-    }
-
-    .header__texte h1 {
-        font-size: 38px;
     }
 
     h2 {
@@ -687,69 +721,92 @@ footer {
         font-size: 18px;
     }
 
+    /*  */
 
-/* Breakpoint à 1196px en max-width */
-@media screen and (min-width: 1246px) {
-    .menu__desktop {
-        padding: 0 10px;
+    @media screen and (min-width: 1196px) {
+        .menu__desktop {
+            padding-right: 0px;
+            padding-left: 0px;
+        }
     }
 
-    /* footer */
+    /* Breakpoint à 1246px en max-width */
+    @media screen and (min-width: 1246px) {
 
-    .footer {
-        display: none;
-    }
+        .header__desktop-droite img {
+            width: 578px;
+        }
 
-    .footer__desktop {
-        display: block;
-        /* height: 351px; */
-        height: auto;
-        padding: 0 15px;
-    }
+        .caroussel__soutiens-logos {
+            height: 163px;
+        }
 
-    .footer__desktop form h4 {
-        font-size: 34px;
-    }
+        .caroussel__soutiens-logos img {
+            height: 104px;
+            width: 685.12px;
+        }
 
-    .footer__desktop form label {
-        font-size: 18px;
-    }
+        .caroussel__soutiens-btn {
+            background: #f1f5f8;
+            align-items: baseline;
+            margin-bottom: 108.12px;
+        }
 
-    .formlogo__container {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
+        /* footer */
+        .footer {
+            display: none;
+        }
 
-    .logo__simplon img {
-        margin-right: 145px;
-    }
+        .footer__desktop {
+            display: block;
+            /* height: 351px; */
+            height: auto;
+            padding: 0 15px;
+        }
 
-    .footer__desktop-reseaux {
-        display: flex;
-        justify-content: center;
-        margin-top: 55px;
-    }
+        .footer__desktop form h4 {
+            font-size: 34px;
+        }
 
-    .desktop__reseaux {
-        width: 366px;
-    }
+        .footer__desktop form label {
+            font-size: 18px;
+        }
 
-    .footer__list-ul {
-        display: flex;
-        justify-content: center;
-        margin-top: 46px;
-    }
+        .formlogo__container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
 
-    .footer__list-ul li {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
+        .logo__simplon img {
+            margin-right: 145px;
+        }
 
-    .footer__list-ul li img {
-        height: 28px;
-        margin: 0 28px; 
+        .footer__desktop-reseaux {
+            display: flex;
+            justify-content: center;
+            margin-top: 55px;
+        }
+
+        .desktop__reseaux {
+            width: 366px;
+        }
+
+        .footer__list-ul {
+            display: flex;
+            justify-content: center;
+            margin-top: 46px;
+        }
+
+        .footer__list-ul li {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .footer__list-ul li img {
+            height: 28px;
+            margin: 0 28px;
+        }
     }
-}
 }
