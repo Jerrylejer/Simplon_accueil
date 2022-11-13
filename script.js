@@ -11,19 +11,19 @@ const menu = document.getElementById('nav__mobile');
 // Au click, j'affecte mes classes CSS et toggle au click
 burger.addEventListener('click', burgerBarres);
 function burgerBarres() {
-    // Animation sur le Burger
+    // Animation Burger => croix
     burgerBarre2.classList.toggle('opacity');
     burgerBarre3.classList.toggle('rotate2');
     burgerBarre1.classList.toggle('rotate1');
-    // Animation du menu
+    // descente du menu
     menu.classList.toggle('nav__mobile--show');
 };
 
-// Essais de récupération des éléments en console => ok
-// console.log(burger);
-// console.log(burgerBarre1);
-// console.log(burgerBarre2);
-// console.log(burgerBarre3);
+menu.addEventListener('click', hideMenu);
+function hideMenu() {
+    // remontée du menu au click menu
+    menu.classList.toggle('nav__mobile--show');
+};
 
 //? SLIDE TEMOIGNAGES => NAVIGATION AU CLICK
 // Je stocke mes éléments
@@ -38,16 +38,6 @@ const numero3 = document.getElementById('temoignage_trois');
 // Les icones de navigation
 const precedent = document.getElementById('temoignage_precedent');
 const suivant = document.getElementById('temoignage_suivant');
-
-// Essais de récupération des éléments en console => ok
-// console.log(temoignage1);
-// console.log(temoignage2);
-// console.log(temoignage3);
-// console.log(numero1);
-// console.log(numero2);
-// console.log(numero3);
-// console.log(precedent);
-// console.log(suivant);
 
 // Le temoignage 02 doit être visible par défaut => Les 2 autres doivent être en class displayoff
 // Un listener au click sur l'icône "précédent" qui appelle une fonction "temoignagePrecedent"

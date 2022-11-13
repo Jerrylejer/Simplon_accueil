@@ -15,7 +15,44 @@
     </head>
     <body>
         <!--! navigation desktop - cachée par défaut car développement mobile-first-->
-        <div class="menu__desktop"></div>
+        <div class="menu__desktop">
+            <div class="menu__desktop-logo">
+                <img
+                    src="/assets/icônes_entreprises/logo-simplon-1.png"
+                    alt="logo simplon"
+                />
+            </div>
+            <nav class="nav__desktop" id="nav__desktop">
+                <ul class="nav__desktop-liste">
+                    <li class="nav__desktop-items">
+                        <a href="#">Entreprises</a>
+                    </li>
+                    <li class="nav__liste-items-desktop">
+                        <a href="#">Réseaux</a>
+                    </li>
+                    <li class="nav__liste-items-desktop">
+                        <a href="#">A propos</a>
+                    </li>
+                    <li class="nav__liste-items-desktop">
+                        <a href="#">Collaborer</a>
+                        <img
+                            src="/assets/icônes_fonctionnes/Polygon 1.png"
+                            alt="icône déploiement sous menu"
+                        />
+                    </li>
+                    <li class="nav__liste-items-desktop">
+                        <a href="#">Formations</a>
+                        <img
+                            src="/assets/icônes_fonctionnes/Polygon 1.png"
+                            alt="icône déploiement sous menu"
+                        />
+                    </li>
+                    <li class="nav__liste-items-desktop">
+                        <a href="#">Contact</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
         <!--! navigation burger - affichée par défaut (actionne la navigation au click en JS)-->
         <div class="menu__mobile">
             <div class="menu__mobile-logo">
@@ -315,45 +352,101 @@
         </main>
         <!--! Footer -->
         <footer class="footer red">
-            <h4>Restez informés</h4>
-            <!-- Formulaire d'inscription à la newsletter -->
-            <form class="footer__form">
-                <label for="email">Inscrivez-vous à la newsletter</label>
-                <div class="input__block">
-                    <input
-                        type="email"
-                        name="email"
-                        placeholder="Entrez votre email"
+            <div class="form__container">
+                <!-- Formulaire d'inscription à la newsletter -->
+                <form class="footer__form">
+                    <h4>Restez informés</h4>
+                    <label for="email">Inscrivez-vous à la newsletter</label>
+                    <div class="input__block">
+                        <input
+                            type="email"
+                            name="email"
+                            placeholder="Entrez votre email"
+                        />
+                        <img
+                            src="/assets/icônes_fonctionnes/Vector_mail.png"
+                            alt="icône envoyer"
+                        />
+                    </div>
+                </form>
+            </div>
+            <!-- Navigation autres pages du site -->
+            <div class="footer__liens">
+                <nav class="footer__liste">
+                    <ul>
+                        <li><a href="#">Nos actualités</a></li>
+                        <li><a a href="#">Rejoindre nos équipes</a></li>
+                        <li><a a href="#">Notre agence numérique</a></li>
+                        <li><a a href="#">Presse</a></li>
+                        <li><a a href="#">Contact</a></li>
+                        <li><a a href="#">Plan du site</a></li>
+                        <li><a a href="#">Mentions légales</a></li>
+                        <li><a a href="#">Accessibilité</a></li>
+                    </ul>
+                </nav>
+                <!-- Réseaux sociaux et Simplon -->
+                <div class="footer__logos">
+                    <img
+                        src="/assets/icônes_reseaux/reseaux.png"
+                        alt="Réseaux sociaux"
                     />
                     <img
-                        src="/assets/icônes_fonctionnes/Vector_mail.png"
-                        alt="icône envoyer"
+                        src="/assets/icônes_entreprises/footer-img.png"
+                        alt="logo Simplon"
                     />
                 </div>
-            </form>
-            <!-- Navigation autres pages du site -->
-            <nav class="footer__liste">
-                <ul>
-                    <li><a href="#">Nos actualités</a></li>
-                    <li><a a href="#">Rejoindre nos équipes</a></li>
-                    <li><a a href="#">Notre agence numérique</a></li>
-                    <li><a a href="#">Presse</a></li>
-                    <li><a a href="#">Contact</a></li>
-                    <li><a a href="#">Plan du site</a></li>
-                    <li><a a href="#">Mentions légales</a></li>
-                    <li><a a href="#">Accessibilité</a></li>
-                </ul>
-            </nav>
-            <!-- Réseaux sociaux et Simplon -->
-            <div class="footer__logos">
+            </div>
+        </footer>
+        <!-- footer en desktop caché par défaut et visible au breakpoint 992px -->
+        <footer class="footer__desktop red">
+            <div class="formlogo__container">
+                <!-- Logo Simplon -->
+                <div class="logo__simplon">
+                    <img
+                        src="/assets/icônes_entreprises/footer-img.png"
+                        alt="logo Simplon"
+                    />
+                </div>
+                <!-- Formulaire d'inscription à la newsletter -->
+                <form class="footer__form">
+                    <h4>Restez informés</h4>
+                    <label for="email">Inscrivez-vous à la newsletter</label>
+                    <div class="input__block">
+                        <input
+                            type="email"
+                            name="email"
+                            placeholder="Entrez votre email"
+                        />
+                        <img
+                            src="/assets/icônes_fonctionnes/Vector_mail.png"
+                            alt="icône envoyer"
+                        />
+                    </div>
+                </form>
+            </div>
+            <!-- Logos réseaux -->
+            <div class="footer__desktop-reseaux">
                 <img
+                    class="desktop__reseaux"
                     src="/assets/icônes_reseaux/reseaux.png"
                     alt="Réseaux sociaux"
                 />
-                <img
-                    src="/assets/icônes_entreprises/footer-img.png"
-                    alt="logo Simplon"
-                />
+            </div>
+            <!-- Navigation autres pages du site -->
+            <div class="footer__desktop-liens">
+                <nav class="footer__liste ">
+                    <ul class="footer__list-ul">
+                        <li><a href="#">Nos actualités</a><img src="/assets/icônes_fonctionnes/pipe.png" alt="pipe"></li>
+                        <li><a a href="#">Rejoindre nos équipes</a><img src="/assets/icônes_fonctionnes/pipe.png" alt="pipe"></li>
+                        <li><a a href="#">Notre agence numérique</a><img src="/assets/icônes_fonctionnes/pipe.png" alt="pipe"></li>
+                        <li><a a href="#">Presse</a><img src="/assets/icônes_fonctionnes/pipe.png" alt="pipe"></li>
+                        <li><a a href="#">Contact</a><img src="/assets/icônes_fonctionnes/pipe.png" alt="pipe"></li>
+                        <li><a a href="#">Plan du site</a><img src="/assets/icônes_fonctionnes/pipe.png" alt="pipe"></li>
+                        <li><a a href="#">Mentions légales</a><img src="/assets/icônes_fonctionnes/pipe.png" alt="pipe"></li>
+                        <li><a a href="#">Accessibilité</a></li>
+                    </ul>
+                </nav>
+                <!-- Réseaux sociaux et Simplon -->
             </div>
         </footer>
         <script src="/script.js"></script>

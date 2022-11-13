@@ -1,5 +1,6 @@
-/*! VERSION MOBILE-FIRST */
-/** GENERAL */
+/*! VERSION MOBILE-FIRST => MEDIAQUERIES VERSION TABLETTES & DESKTOP EN BAS DE FICHIER*/
+
+/** CSS GLOBAL PAGE */
 *,
 ::before,
 ::after {
@@ -14,6 +15,7 @@ body,
 html {
     font-family: 'Nunito', sans-serif;
     background: #f1f5f8;
+    max-height: 100vh;
 }
 
 /** TAGS */
@@ -23,12 +25,12 @@ main {
 }
 
 h1 {
-    font: normal 700 64px/113.4% 'Nunito Sans';
+    font: normal 700 24px/113.4% 'Nunito Sans';
     color: #000000;
 }
 
 h2 {
-    font: normal 700 34px/43px 'Nunito Sans';
+    font: normal 700 30px/43px 'Nunito Sans';
     color: #000000;
     padding: 50px 0px 20px 16px;
 }
@@ -41,10 +43,12 @@ h3 {
 h4 {
     font: normal 700 24px/113.4% 'Nunito Sans';
     color: white;
+    margin-top: 42px;
+    margin-bottom: 6px;
 }
 
 p {
-    font: normal 300 18px/25px 'Nunito Sans';
+    font: normal 300 16px/25px 'Nunito Sans';
     color: #000000;
 }
 
@@ -101,12 +105,26 @@ footer {
     cursor: pointer;
 }
 
+/* Elements en flex row */
+.menu__mobile,
+.impact__container,
+.caroussel__nav,
+.caroussel__slide,
+.caroussel__soutiens-logos,
+.caroussel__soutiens-btn {
+    display: flex;
+}
+
+/* Elements en flex column */
 .burger,
 .header__buttons,
 .impact,
 .temoignages,
 .apprentis__card,
-.apprentis__textes {
+.apprentis__textes,
+.apprentis__button,
+.footer__form,
+.footer__logos {
     display: flex;
     flex-direction: column;
 }
@@ -128,11 +146,15 @@ footer {
 
 /*? MENU - NAVIGATION */
 /* MENU */
+
+.menu__desktop {
+    display: none;
+}
+
 .menu__mobile {
     position: fixed;
     z-index: 2;
     width: 100%;
-    display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 16px;
@@ -173,12 +195,13 @@ footer {
     margin-bottom: 52px;
 }
 
-/* classes crées pour les animations en Javascript */
+/** CLASS ANIMATIONS POUR LE JAVASCRIPT */
 .opacity {
     opacity: 0;
     transition: 1s;
 }
 
+/* mise en place de la croix */
 .rotate1 {
     transform: translateY(10px) rotate(45deg);
     transition: 1s;
@@ -189,6 +212,7 @@ footer {
     transition: 1s;
 }
 
+/* descente du menu */
 .nav__mobile--show {
     top: 0;
     transition: 1s;
@@ -227,15 +251,15 @@ footer {
 /*? SECTION IMPACTS */
 
 .impact__container {
-    display: flex;
-    flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
 }
 
 .impact__container h3 {
     margin-bottom: 12px;
-    font-size: 2rem;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 113.4%;
 }
 
 .impact__items {
@@ -261,7 +285,7 @@ footer {
 }
 
 .impact__items--4 {
-    background-color: #cf3034;
+    background: #cf3034;
 }
 
 .impact__items--4 p {
@@ -295,13 +319,11 @@ footer {
 }
 
 .caroussel__nav {
-    display: flex;
     justify-content: center;
     padding-top: 20px;
 }
 
 .caroussel__slide {
-    display: flex;
     justify-content: center;
     margin: 0 40px 0;
 }
@@ -321,11 +343,11 @@ footer {
 /* Animation sur apparition/disparition des témoignages */
 @keyframes opacity1 {
     from {
-        opacity:0;
+        opacity: 0;
     }
-     to {
+    to {
         opacity: 1;
-     }
+    }
 }
 
 .displayoff {
@@ -339,9 +361,9 @@ footer {
     from {
         opacity: 1;
     }
-     to {
+    to {
         opacity: 0;
-     }
+    }
 }
 
 /* Gras du chiffre sélectionné */
@@ -363,8 +385,6 @@ footer {
 
 .apprentis__button {
     width: 100%;
-    display: flex;
-    flex-direction: column;
 }
 
 .apprentis__texte-titre {
@@ -372,6 +392,7 @@ footer {
     font-size: 1.1rem;
     line-height: 20.41px;
     font-weight: bolder;
+    font-size: 18px;
 }
 
 .apprentis__texte-paragraphe {
@@ -387,7 +408,6 @@ footer {
 }
 
 .caroussel__soutiens-logos {
-    display: flex;
     justify-content: center;
     margin-top: 20px;
 }
@@ -401,7 +421,6 @@ footer {
 }
 
 .caroussel__soutiens-btn {
-    display: flex;
     align-items: flex-start;
     justify-content: space-between;
 }
@@ -425,11 +444,11 @@ footer {
 /* Animation sur apparition/disparition des témoignages */
 @keyframes opacity1 {
     from {
-        opacity:0;
+        opacity: 0;
     }
-     to {
+    to {
         opacity: 1;
-     }
+    }
 }
 
 .displayoff {
@@ -443,9 +462,9 @@ footer {
     from {
         opacity: 1;
     }
-     to {
+    to {
         opacity: 0;
-     }
+    }
 }
 
 /*! Bouton enter refait manuellement car padding sur image Figma */
@@ -465,11 +484,11 @@ footer {
 
 /*? SECTION FOOTERS */
 
-.footer h4 {
-    margin-top: 42px;
-    margin-bottom: 6px;
+.footer__desktop {
+    display: none;
 }
 
+/* Liste navigation */
 .footer__liste {
     margin-bottom: 52px;
 }
@@ -481,13 +500,10 @@ footer {
 
 .footer__liste ul li a {
     color: white;
+    font-size: 16px;
 }
 
-.footer__form {
-    display: flex;
-    flex-direction: column;
-}
-
+/* Label & input + icône mail */
 .footer__form label {
     margin-bottom: 15px;
     font-weight: bolder;
@@ -499,7 +515,7 @@ footer {
     background: #cf3034;
     border: 0.5px solid white;
     border-right: none;
-    width: 90%;
+    width: 95%;
     height: 30px;
 }
 
@@ -518,11 +534,222 @@ footer {
     padding-left: 25px;
 }
 
+/* Logos bas de page */
 .footer__logos {
     height: 180px;
     margin-bottom: 38px;
-    display: flex;
-    flex-direction: column;
     justify-content: space-between;
     align-items: center;
+}
+
+/*! MEDIAQUERIES */
+
+/* Breakpoint à 414px en min-width */
+@media screen and (min-width: 414px) {
+    /* diminuer la width des 3 boutons à 193px */
+    button {
+        width: 193px;
+    }
+
+    .header__buttons {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    /* bloquer la width de l'input à 315px à partir de 414px */
+    .footer__form input {
+        width: 315px;
+    }
+}
+
+/* Breakpoint à 769px en min-width */
+@media screen and (min-width: 769px) {
+    /* diminnuer la width des sections temoignages apprentis et soutiens */
+    .impact,
+    .apprentis,
+    .temoignages,
+    .soutiens {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .header__buttons {
+        flex-direction: row;
+        justify-content: flex-start;
+    }
+
+    .form__container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .footer__liens {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    .footer__liens nav {
+        flex: 0.8;
+    }
+}
+
+/* Breakpoint à 992px en min-width */
+@media screen and (min-width: 992px) {
+    .menu__mobile,
+    .nav__mobile {
+        display: none;
+    }
+
+    .menu__desktop {
+        display: block;
+        max-width: 1196px;
+        margin: 0 auto 39px;
+        height: 102px;
+        border-bottom: 2px solid white;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .menu__desktop-logo {
+        flex: 1;
+    }
+
+    nav {
+        flex: 2;
+    }
+
+    .nav__liste {
+        width: 100%;
+        height: 435px;
+    }
+
+    .nav__desktop ul {
+        display: flex;
+        justify-content: space-between;
+        color: black;
+    }
+
+    .nav__desktop ul li a {
+        color: black;
+    }
+
+    .header {
+        padding-top: 0;
+    }
+
+    .header,
+    .impact,
+    .apprentis,
+    .temoignages,
+    .soutiens {
+        max-width: 1196px;
+        margin: 0 auto;
+    }
+
+    .header__texte h1 {
+        font-size: 38px;
+    }
+
+    h2 {
+        font-size: 38px;
+        line-height: 43px;
+    }
+
+    .impact__container h3 {
+        font-size: 64px;
+        line-height: 113.4%;
+    }
+
+    .impact__items p {
+        font-size: 24px;
+        line-height: 113.4%;
+    }
+
+    /* Les carrés "impact" changent en width et height */
+    .impact__items {
+        width: 197px;
+        height: 254px;
+    }
+
+    .impact__container {
+        gap: 10px;
+    }
+
+    .apprentis__texte-titre {
+        font-size: 24px;
+    }
+
+    .apprentis__texte-paragraphe {
+        font-size: 18px;
+    }
+
+
+/* Breakpoint à 1196px en max-width */
+@media screen and (min-width: 1246px) {
+    .menu__desktop {
+        padding: 0 10px;
+    }
+
+    /* footer */
+
+    .footer {
+        display: none;
+    }
+
+    .footer__desktop {
+        display: block;
+        /* height: 351px; */
+        height: auto;
+        padding: 0 15px;
+    }
+
+    .footer__desktop form h4 {
+        font-size: 34px;
+    }
+
+    .footer__desktop form label {
+        font-size: 18px;
+    }
+
+    .formlogo__container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .logo__simplon img {
+        margin-right: 145px;
+    }
+
+    .footer__desktop-reseaux {
+        display: flex;
+        justify-content: center;
+        margin-top: 55px;
+    }
+
+    .desktop__reseaux {
+        width: 366px;
+    }
+
+    .footer__list-ul {
+        display: flex;
+        justify-content: center;
+        margin-top: 46px;
+    }
+
+    .footer__list-ul li {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .footer__list-ul li img {
+        height: 28px;
+        margin: 0 28px; 
+    }
+}
 }
