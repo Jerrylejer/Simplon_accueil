@@ -308,7 +308,11 @@ footer {
     width: 100%;
 }
 
-.caroussel__temoignage-texte img {
+.guillemets__desktop {
+    display: none;
+}
+
+.guillemets__mobile {
     margin-left: 16px;
     margin-top: 25px;
 }
@@ -322,6 +326,10 @@ footer {
     font-weight: bold;
     margin-left: 16px;
     line-height: 21.82px;
+}
+
+.caroussel__temoignage-photo {
+    display: none;
 }
 
 .caroussel__nav {
@@ -389,8 +397,27 @@ footer {
     align-items: center;
 }
 
-.apprentis__button {
-    width: 100%;
+.apprentis__image,
+.desktop {
+    display: none;
+}
+
+.apprentis__image,
+.mobile {
+    display: block;
+}
+
+.apprentis__image .mobile img {
+    max-width: 90%;
+    /* height: 144px; */
+}
+
+.apprentis__button--mobile {
+    display: block;
+}
+
+.apprentis__button--desktop {
+    display: none;
 }
 
 .apprentis__texte-titre {
@@ -664,7 +691,6 @@ footer {
         margin-left: 40px;
     }
 
-    
     .header__texte h1 {
         font-size: 38px;
     }
@@ -672,13 +698,13 @@ footer {
     button {
         margin: 0px 0px;
     }
-    
+
     .header__buttons {
         flex-direction: row;
         justify-content: flex-start;
         gap: 19px;
     }
-    
+
     .header,
     .impact,
     .apprentis,
@@ -713,16 +739,58 @@ footer {
         gap: 10px;
     }
 
+    /* section temoignages */
+
+    /* section apprentis */
+    .apprentis {
+        padding-bottom: 0px;
+    }
+
+    .apprentis__card {
+        position: relative;
+        background: url(/assets/photos/img-apprentis_desktop.png) no-repeat center center/ 120%;
+        height: 375px;
+    }
+
+    .apprentis__texte {
+        position: absolute;
+        width: 511px;
+        height: 323px;
+        top: 0;
+        right: 0;
+        background: white;
+        padding: 40px;
+    }
+
     .apprentis__texte-titre {
         font-size: 24px;
+        position: relative;
+        top: 40px;
     }
 
     .apprentis__texte-paragraphe {
         font-size: 18px;
+        position: relative;
+        top: 60px;
     }
 
-    /*  */
+    .apprentis__image .mobile {
+        display: none;
+    }
 
+    .apprentis__button--mobile {
+        display: none;
+    }
+
+    .apprentis__button--desktop {
+        display: block;
+        position: absolute;
+        top: 230px;
+        left: 55px;
+    }
+
+
+    /* Breakpoint à 1196px en max-width */
     @media screen and (min-width: 1196px) {
         .menu__desktop {
             padding-right: 0px;
@@ -732,7 +800,6 @@ footer {
 
     /* Breakpoint à 1246px en max-width */
     @media screen and (min-width: 1246px) {
-
         .header__desktop-droite img {
             width: 578px;
         }
