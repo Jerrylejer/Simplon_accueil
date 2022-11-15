@@ -308,13 +308,14 @@ footer {
     width: 100%;
 }
 
-.guillemets__desktop {
+.guillemets-desktop {
     display: none;
 }
 
-.guillemets__mobile {
+.guillemets-mobile {
     margin-left: 16px;
     margin-top: 25px;
+    margin-bottom: 10px;
 }
 
 .caroussel__temoignage-paragraphe {
@@ -741,6 +742,17 @@ display: none;
     }
 
     /* section temoignages */
+
+    .guillemets-mobile {
+        display: none;
+    }
+
+    .guillemets-desktop {
+        display: block;
+        margin-left: 16px;
+        margin-top: 25px;
+        margin-bottom: 20px;
+    }
 
     /* section apprentis */
     .apprentis {
