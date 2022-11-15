@@ -480,12 +480,12 @@ footer {
     left: 5px;
 }
 
-/* Animation automatique va et vient du slide */ /** CLASS ANIMATIONS POUR LE JAVASCRIPT */
+/** CLASS ANIMATIONS POUR LE JAVASCRIPT */
 
+/* Animation automatique du caroussel */ 
 .appear {
     display: block;
-    animation: appear 5s infinite;
-
+    animation: appear 4s infinite;
 }
 
 @keyframes appear {
@@ -499,8 +499,7 @@ footer {
 
 .disappear {
     display: none;
-    animation: disappear 5s inifinite;
-
+    animation: disappear 4s infinite;
 }
 
 @keyframes disappear {
@@ -510,6 +509,14 @@ footer {
     to {
         opacity: 0;
     }
+}
+
+.actif {
+display: block;
+}
+
+.off {
+display: none;
 }
 
 /*? SECTION FOOTERS */

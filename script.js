@@ -127,9 +127,11 @@ function numeroSwitch3() {
 // Je stocke mes éléments
 const banniere1 = document.getElementById('banniere1');
 const banniere2 = document.getElementById('banniere2');
-console.log(banniere1);
-console.log(banniere2);
+const pause = document.getElementById('pause');
+// console.log(banniere1);
+// console.log(banniere2);
 
+// slide des images
 setInterval(function() {
     if (banniere1.classList.contains('appear')) {
         banniere1.classList.remove('appear');
@@ -141,6 +143,25 @@ setInterval(function() {
         banniere2.classList.add('disappear');
         banniere1.classList.remove('disappear');
         banniere1.classList.add('appear')
-    }
+    } 
 }, 4000);
+
+// Caroussel à refaire avec plus de temps car les images devraient arriver de la droite et gauche
+// Pause au click => Je cherche pour qu'au second clique la pause se lève et reprenne l'animation normale
+// Solution passe par un toggle => voir également le JS pour les défilement droite et gauche (manque temps)
+pause.addEventListener('click', wait);
+function wait() {
+    if(banniere1.classList.contains('appear')) {
+        banniere1.classList.remove('appear');
+        banniere2.classList.remove('disappear');
+        banniere1.classList.add('actif');
+        banniere2.classList.add('off');
+    } else if (banniere2.classList.contains('appear')) {
+        banniere2.classList.remove('appear');
+        banniere1.classList.remove('disappear');
+        banniere2.classList.add('actif');
+        banniere1.classList.add('off');
+    } 
+}
+
 
