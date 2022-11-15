@@ -17,13 +17,13 @@ function burgerBarres() {
     burgerBarre1.classList.toggle('rotate1');
     // descente du menu
     menu.classList.toggle('nav__mobile--show');
-};
+}
 
 menu.addEventListener('click', hideMenu);
 function hideMenu() {
     // remontée du menu au click menu
     menu.classList.toggle('nav__mobile--show');
-};
+}
 
 //? SLIDE TEMOIGNAGES => NAVIGATION AU CLICK
 // Je stocke mes éléments
@@ -59,7 +59,7 @@ function temoignagePrecedent() {
         temoignage2.classList.add('displayon');
         numero2.classList.add('gras');
     }
-};
+}
 
 // Un listener au click sur l'icône "suivant" qui appelle une fonction "temoignageSuivant"
 // ces fonctions suivant le temoignage affiché, détermine celui à suivre au click et ceux à cacher
@@ -80,7 +80,7 @@ function temoignageSuivant() {
         temoignage2.classList.add('displayon');
         numero2.classList.add('gras');
     }
-};
+}
 
 // Idem au click direct sur les numéros des articles
 numero1.addEventListener('click', numeroSwitch1);
@@ -94,7 +94,7 @@ function numeroSwitch1() {
     temoignage3.classList.remove('displayon');
     temoignage3.classList.add('displayoff');
     numero3.classList.remove('gras');
-};
+}
 
 numero2.addEventListener('click', numeroSwitch2);
 function numeroSwitch2() {
@@ -107,7 +107,7 @@ function numeroSwitch2() {
     temoignage3.classList.remove('displayon');
     temoignage3.classList.add('displayoff');
     numero3.classList.remove('gras');
-};
+}
 
 numero3.addEventListener('click', numeroSwitch3);
 function numeroSwitch3() {
@@ -120,6 +120,27 @@ function numeroSwitch3() {
     temoignage2.classList.remove('displayon');
     temoignage2.classList.add('displayoff');
     numero2.classList.remove('gras');
-};
+}
 
-//? SLIDE ILS NOUS SOUTIENNENT => NAVIGATION AU CLICK
+//? SLIDE ILS NOUS SOUTIENNENT => NAVIGATION AUTOMATIQUE
+
+// Je stocke mes éléments
+const banniere1 = document.getElementById('banniere1');
+const banniere2 = document.getElementById('banniere2');
+console.log(banniere1);
+console.log(banniere2);
+
+setInterval(function() {
+    if (banniere1.classList.contains('appear')) {
+        banniere1.classList.remove('appear');
+        banniere1.classList.add('disappear')
+        banniere2.classList.remove('disappear');
+        banniere2.classList.add('appear');
+    } else if (banniere2.classList.contains('appear')) {
+        banniere2.classList.remove('appear');
+        banniere2.classList.add('disappear');
+        banniere1.classList.remove('disappear');
+        banniere1.classList.add('appear')
+    }
+}, 4000);
+

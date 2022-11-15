@@ -452,10 +452,6 @@ footer {
     height: 50px;
 }
 
-.caroussel__soutiens-logos :nth-child(2) {
-    width: 330px;
-}
-
 .caroussel__soutiens-btn {
     align-items: flex-start;
     justify-content: space-between;
@@ -467,40 +463,6 @@ footer {
 
 .caroussel__soutiens-nav :nth-child(2) {
     margin: 0 30px 0;
-}
-
-/** CLASS ANIMATIONS POUR LE JAVASCRIPT */
-.displayon {
-    display: block;
-    animation-name: opacity1;
-    animation-duration: 1s;
-    animation-timing-function: ease-in-out;
-}
-
-/* Animation sur apparition/disparition des témoignages */
-@keyframes opacity1 {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
-
-.displayoff {
-    display: none;
-    animation-name: opacity0;
-    animation-duration: 1s;
-    animation-timing-function: ease-in-out;
-}
-
-@keyframes opacity0 {
-    from {
-        opacity: 1;
-    }
-    to {
-        opacity: 0;
-    }
 }
 
 /*! Bouton enter refait manuellement car padding sur image Figma */
@@ -516,6 +478,38 @@ footer {
     position: absolute;
     top: 8px;
     left: 5px;
+}
+
+/* Animation automatique va et vient du slide */ /** CLASS ANIMATIONS POUR LE JAVASCRIPT */
+
+.appear {
+    display: block;
+    animation: appear 5s infinite;
+
+}
+
+@keyframes appear {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.disappear {
+    display: none;
+    animation: disappear 5s inifinite;
+
+}
+
+@keyframes disappear {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
 }
 
 /*? SECTION FOOTERS */
@@ -748,7 +742,8 @@ footer {
 
     .apprentis__card {
         position: relative;
-        background: url(/assets/photos/img-apprentis_desktop.png) no-repeat center center/ 120%;
+        background: url(/assets/photos/img-apprentis_desktop.png) no-repeat
+            center center/ 120%;
         height: 375px;
     }
 
@@ -788,7 +783,6 @@ footer {
         top: 230px;
         left: 55px;
     }
-
 
     /* Breakpoint à 1196px en max-width */
     @media screen and (min-width: 1196px) {
