@@ -1,4 +1,5 @@
 /*! VERSION MOBILE-FIRST => MEDIAQUERIES VERSION TABLETTES & DESKTOP EN BAS DE FICHIER*/
+/*todo => Alléger le CSS car pas eu le temps de le faire avant rendu du projet */
 
 /** CSS GLOBAL PAGE */
 *,
@@ -18,7 +19,7 @@ html {
     max-height: 100vh;
 }
 
-/** TAGS */
+/** DECLARATIONS POUR LES TAGS */
 
 main {
     width: 100%;
@@ -69,7 +70,7 @@ footer {
     padding: 15px;
 }
 
-/** DECLARATIONS */
+/** DECLARATIONS REUTILISABLES*/
 .red {
     background-color: #cf3034;
     color: white;
@@ -251,7 +252,7 @@ footer {
     gap: 15px;
 }
 
-/* phot header cachée en version mobile, apparait au breakpoint 1246px */
+/* photo header cachée en version mobile, apparait au breakpoint 1246px */
 .header__desktop-droite {
     display: none;
 }
@@ -349,7 +350,7 @@ footer {
     margin: 0 10px 0;
 }
 
-/** CLASS ANIMATIONS POUR LE JAVASCRIPT */
+/** TEMOIGNAGES => DEBUT CLASS ANIMATIONS POUR LE JAVASCRIPT */
 .displayon {
     display: block;
     animation-name: opacity1;
@@ -382,6 +383,7 @@ footer {
         opacity: 0;
     }
 }
+/** TEMOIGNAGES => FIN CLASS ANIMATIONS POUR LE JAVASCRIPT */
 
 /* Gras du chiffre sélectionné */
 .gras {
@@ -483,9 +485,8 @@ footer {
     left: 5px;
 }
 
-/** CLASS ANIMATIONS POUR LE JAVASCRIPT */
-
-/* Animation automatique du caroussel */ 
+/** SOUTIENS => DEBUT CLASS ANIMATIONS POUR LE JAVASCRIPT */
+/* Animation automatique du caroussel */
 .appear {
     display: block;
     animation: appear 4s infinite;
@@ -515,12 +516,13 @@ footer {
 }
 
 .actif {
-display: block;
+    display: block;
 }
 
 .off {
-display: none;
+    display: none;
 }
+/** SOUTIENS => FIN CLASS ANIMATIONS POUR LE JAVASCRIPT */
 
 /*? SECTION FOOTERS */
 
@@ -586,16 +588,19 @@ display: none;
 
 /* Breakpoint à 414px en min-width */
 @media screen and (min-width: 414px) {
+    /* Général */
     /* diminuer la width des 3 boutons à 193px */
     button {
         width: 193px;
     }
 
+    /* Header */
     .header__buttons {
         flex-direction: row;
         justify-content: center;
     }
 
+    /* Footer */
     /* bloquer la width de l'input à 315px à partir de 414px */
     .footer__form input {
         width: 315px;
@@ -604,7 +609,7 @@ display: none;
 
 /* Breakpoint à 769px en min-width */
 @media screen and (min-width: 769px) {
-    /* diminnuer la width des sections temoignages apprentis et soutiens */
+    /* Général */
     .impact,
     .apprentis,
     .temoignages,
@@ -613,6 +618,7 @@ display: none;
         margin: 0 auto;
     }
 
+    /* footer */
     .form__container {
         display: flex;
         flex-direction: column;
@@ -633,6 +639,22 @@ display: none;
 
 /* Breakpoint à 992px en min-width */
 @media screen and (min-width: 992px) {
+    /* Général */
+    .header,
+    .impact,
+    .apprentis,
+    .temoignages,
+    .soutiens {
+        max-width: 1196px;
+        margin: 0 auto;
+    }
+
+    h2 {
+        font-size: 38px;
+        line-height: 43px;
+    }
+
+    /* Menu & nav */
     .menu__mobile,
     .nav__mobile {
         display: none;
@@ -673,6 +695,7 @@ display: none;
         color: black;
     }
 
+    /* header */
     .header {
         padding-top: 0;
         display: flex;
@@ -709,20 +732,7 @@ display: none;
         gap: 19px;
     }
 
-    .header,
-    .impact,
-    .apprentis,
-    .temoignages,
-    .soutiens {
-        max-width: 1196px;
-        margin: 0 auto;
-    }
-
-    h2 {
-        font-size: 38px;
-        line-height: 43px;
-    }
-
+    /* section impacts */
     .impact__container h3 {
         font-size: 64px;
         line-height: 113.4%;
@@ -733,7 +743,6 @@ display: none;
         line-height: 113.4%;
     }
 
-    /* Les carrés "impact" changent en width et height */
     .impact__items {
         width: 197px;
         height: 254px;
@@ -742,7 +751,7 @@ display: none;
     .impact__container {
         gap: 10px;
     }
-    
+
     /* section temoignages */
     .temoignages__container {
         position: relative;
@@ -841,10 +850,12 @@ display: none;
 
     /* Breakpoint à 1246px en max-width */
     @media screen and (min-width: 1246px) {
+        /* header */
         .header__desktop-droite img {
             width: 578px;
         }
 
+        /* Soutiens */
         .caroussel__soutiens-logos {
             height: 163px;
         }

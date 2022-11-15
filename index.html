@@ -54,6 +54,7 @@
             </nav>
         </div>
         <!--! navigation burger - affichée par défaut (actionne la navigation au click en JS)-->
+        <!--todo affiner l'animation à la fermeture du burger qui est trop rapide -->
         <div class="menu__mobile">
             <div class="menu__mobile-logo">
                 <img
@@ -186,6 +187,7 @@
                 <h2 class="temoignage__titre">Témoignages</h2>
                 <div class="temoignages__container">
                     <div class="temoignages__articles">
+                        <!-- témoignage numéro 1 -->
                         <div
                             class="caroussel__temoignage displayoff"
                             id="temoignage1"
@@ -211,9 +213,10 @@
                                 générale après une formation de développeur web Java
                             </p>
                             <div class="simploniens">
-                                <img src="/assets/photos/temoignages-1-img.png" alt="">
+                                <img src="/assets/photos/temoignages-1-img.png" alt="Jonathan un Simplonien">
                             </div>
                         </div>
+                        <!-- témoignage numéro 2 -->
                         <div
                             class="caroussel__temoignage displayon"
                             id="temoignage2"
@@ -238,9 +241,10 @@
                                 une formation développeur Web & mobile
                             </p>
                             <div class="simploniens">
-                                <img src="/assets/photos/temoignages-2-img.png" alt="">
+                                <img src="/assets/photos/temoignages-2-img.png" alt="Imane une Simplonniene">
                             </div>
                         </div>
+                        <!-- témoignage numéro 3 -->
                         <div
                             class="caroussel__temoignage displayoff"
                             id="temoignage3"
@@ -265,10 +269,11 @@
                                 développeur Data I.A
                             </p>
                             <div class="simploniens">
-                                <img src="/assets/photos/temoignages-3-img.png" alt="">
+                                <img src="/assets/photos/temoignages-3-img.png" alt="Alcha une Simplonienne">
                             </div>
                         </div>
                     </div>
+                    <!-- Navigation consacrée aux défilements des témoignages -->
                     <div class="caroussel__nav">
                         <img
                             src="/assets/icônes_fonctionnes/Vector_curseur_gauche.png"
@@ -301,6 +306,7 @@
                 </div>
             </section>
             <!--? Section "APPRENTIS SIMPLON" -->
+            <!--todo affiner le responsive -->
             <section class="apprentis">
                 <h2 class="apprentis__titre">Apprentis Simplon</h2>
                 <div class="apprentis__card">
@@ -331,9 +337,11 @@
                 </div>
             </section>
             <!--? Section "ILS NOUS SOUTIENNENT" -->
+            <!--todo affiner le responsive -->
             <section class="soutiens">
                 <h2 class="soutiens__titre">Ils nous soutiennent</h2>
                 <div class="caroussel__soutiens">
+                    <!-- 2 images rassemblant 5 logos chacunes -->
                     <div class="caroussel__soutiens-logos">
                         <img
                             src="/assets/icônes_entreprises/logos-partenaires-large.png"
@@ -348,6 +356,8 @@
                             class="disappear"
                         />
                     </div>
+                    <!-- Navigation consacrée aux défilements des images -->
+                    <!--todo terminer le JS en pause + navigation droite/gauche et enter-->
                     <div class="caroussel__soutiens-btn">
                         <div class="caroussel__soutiens-nav">
                             <img
@@ -374,7 +384,7 @@
                 </div>
             </section>
         </main>
-        <!--! Footer -->
+        <!--! Footer mobile affiché par défaut et caché à partir du breakpoint 992px-->
         <footer class="footer red">
             <div class="form__container">
                 <!-- Formulaire d'inscription à la newsletter -->
@@ -409,6 +419,7 @@
                     </ul>
                 </nav>
                 <!-- Réseaux sociaux et Simplon -->
+                <!--todo implémenter les logo réseaux un à un et créer liens -->
                 <div class="footer__logos">
                     <img
                         src="/assets/icônes_reseaux/reseaux.png"
@@ -421,7 +432,7 @@
                 </div>
             </div>
         </footer>
-        <!-- footer en desktop caché par défaut et visible au breakpoint 992px -->
+        <!--! footer en desktop caché par défaut et visible au breakpoint 992px -->
         <footer class="footer__desktop red">
             <div class="formlogo__container">
                 <!-- Logo Simplon -->
@@ -449,6 +460,7 @@
                 </form>
             </div>
             <!-- Logos réseaux -->
+            <!--todo implémenter les logo réseaux un à un et créer liens -->
             <div class="footer__desktop-reseaux">
                 <img
                     class="desktop__reseaux"
