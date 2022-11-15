@@ -93,6 +93,7 @@ footer {
 }
 
 .menu__mobile-logo,
+.menu__desktop-logo,
 .burger,
 .logo__simplon,
 .impact__items,
@@ -101,7 +102,8 @@ footer {
 .caroussel__nav,
 .caroussel__soutiens-nav img,
 .footer__liste,
-.footer__logos {
+.footer__logos,
+.desktop__reseaux {
     cursor: pointer;
 }
 
@@ -329,7 +331,7 @@ footer {
     line-height: 21.82px;
 }
 
-.caroussel__temoignage-photo {
+.simploniens {
     display: none;
 }
 
@@ -740,8 +742,12 @@ display: none;
     .impact__container {
         gap: 10px;
     }
-
+    
     /* section temoignages */
+    .temoignages__container {
+        position: relative;
+        height: 475px;
+    }
 
     .guillemets-mobile {
         display: none;
@@ -750,8 +756,30 @@ display: none;
     .guillemets-desktop {
         display: block;
         margin-left: 16px;
-        margin-top: 25px;
+        margin-top: 20px;
         margin-bottom: 20px;
+    }
+
+    .caroussel__temoignage {
+        position: absolute;
+        top: 51px;
+    }
+
+    .caroussel__temoignage-paragraphe {
+        width: min(770px, 58%);
+    }
+
+    .simploniens {
+        display: block;
+        position: absolute;
+        top: 20px;
+        right: 59px;
+    }
+
+    .caroussel__nav {
+        position: absolute;
+        top: 400px;
+        right: 90px;
     }
 
     /* section apprentis */
